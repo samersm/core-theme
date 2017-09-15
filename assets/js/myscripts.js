@@ -1,3 +1,5 @@
+/*global $*/
+
 function reply_click(clicked_id)
 {
     alert(clicked_id);
@@ -8,5 +10,5 @@ function myFunction() {
 }
 
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#maintable').DataTable();
 } );

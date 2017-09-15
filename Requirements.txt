@@ -10,7 +10,9 @@ Developments Technologies
 
 * Focus on Datatable, Forms 
 * Header Should Have (Main page, contact, add item,    Login, Logout)
-
+* Translate The data table
+* Put Add, Edit, Delete bottons in the datatable
+* Use gulp in the project
 
 
 
