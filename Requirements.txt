@@ -1,0 +1,17 @@
+Ci-Design App
+* Make a contact page
+* Make an about page
+* Make a single item view page
+
+Developments Technologies
+* You Should Use (HTML5, CSS3, Bootstrap, JQuery, SASS, Gulp, Hnadlebars, Bower)
+* Use Font Awesome
+
+
+* Focus on Datatable, Forms 
+* Header Should Have (Main page, contact, add item,    Login, Logout)
+
+
+
+
+https://clacite-mrsamer.c9users.io/
