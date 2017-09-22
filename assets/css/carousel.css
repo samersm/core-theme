@@ -66,6 +66,14 @@ body {
     color: white;
 }
 
+.navbar-toggle .collapsed {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
