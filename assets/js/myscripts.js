@@ -12,3 +12,8 @@ function myFunction() {
 $(document).ready(function() {
     $('#maintable').DataTable();
 } );
+
+$('#navbar > ul').dropotron({
+// OPTIONS HERE
+expandMode: 'hover'
+});
