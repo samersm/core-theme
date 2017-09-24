@@ -18,5 +18,11 @@ Developments Technologies
 * Chagne navbar Text colors and size
 
 
+Highlited Requirements
+* Rmeove the third row in the main page and replace it with contact form.
+* Remove read me in the Heading
+* Add the Footer to All pages
+
+
 
 https://clacite-mrsamer.c9users.io/
