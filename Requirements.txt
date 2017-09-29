@@ -18,10 +18,11 @@ Developments Technologies
 * Chagne navbar Text colors and size
 
 
-Highlited Requirements
+Highly Focused Requirements
 * Rmeove the third row in the main page and replace it with contact form.
-* Remove read me in the Heading
+* Remove read me(Links) in the Heading
 * Add the Footer to All pages
+* Add contact us info in the main page
 
 
 

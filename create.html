@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Core-Theme</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" />
+    <!--Custom SCSS-->
+    <link rel="stylesheet" href="assets/css/style.scss" type="text/scss" />
+    <!--Custom JS-->
+    <script src="assets/js/myscripts.js"></script>
+    
+    <!--JQuery Datatable-->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" type="text/css" />
+    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    
+   
+    
+    <body>
+        
+        
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header pull-right">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand pull-right" href="index.html">مؤسسة التطوير</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse pull-left">
+          <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">اضف جديد <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="app.html">Action</a></li>
+          </ul>
+          </li>
+            <li><a href="logout.html">تسجيل الخروج</a></li>
+            <li><a href="login.html">تسجيل الدخول</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    
+     <!--Head Codes should replaced later-->
+
+<div class="container">
+     <div class="row">
+       <div class="col-md-offset-3">
+             <div class="well auth-content col-md-8 align-self-center">
+                 <div class="center">
+                 <h1>تسجيل الدخول</h1>
+                <hr>
+                </div>
+                <form>
+            <div class="form-group">
+        		<label>mobile</label>
+        		<input type="text" class="form-control" name="mobile" placeholder="mobile">
+        	</div>
+        </div>
+        <div class="col-md-6">
+        	<div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+        </div>
+    <div class-"row">
+        <div class="col-md-6">
+            <div class="form-group">
+        		<label>country</label>
+        		<input type="text" class="form-control" name="country" value="<?php echo set_value('country'); ?>" placeholder="country">
+        		
+        	</div>
+        </div>
+        <div class="col-md-6">
+        	<div class="form-group">
+                	<label>city</label>
+        		<input type="text" class="form-control" name="city" value="<?php echo set_value('city'); ?>" placeholder="city">
+            </div>
+        </div>
+    </div>
+    <div class-"row">
+        <div class="col-md-6">
+            <div class="form-group">
+            <label for="exampleSelect1">select Rent or Sale</label>
+            <select class="form-control" id="exampleSelect1" name="rentOrSale">
+                <option value="" data-tokens="">Select</option>
+                <option value="rent" data-tokens="rent">for Rent</option>
+                <option value="sale" data-tokens="sale">for Sale</option>
+            </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+        		<label>price</label>
+        		<input type="text" class="form-control" name="price" value="<?php echo set_value('price'); ?>" placeholder="price">
+        	</div>
+        </div>
+    </div>
+    <div class-"row">
+        <div class="col-md-12">
+            <div class="form-group">
+        		<label>Title</label>
+        		<input type="text" class="form-control" name="title" value="<?php echo set_value('title'); ?>" placeholder="Title">
+        	</div>
+        </div>
+        <div class="col-md-12">
+        	<div class="form-group">
+        		<label>description</label>
+        		<textarea  id="editor1" type="text" class="form-control" name="description" placeholder="description" rows="3"><?php echo set_value('description'); ?></textarea>
+        	</div>
+        </div>
+    </div>
+    
+    
+    <div class-"row">
+        <div class="col-md-12 col-md-offset-0">
+             <fieldset class="form-group">
+                <legend>Contact Way</legend>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="emailOrMobile" id="optionsRadios1" value="by_email_or_mobile" checked>
+                    Contact me by email or mobile 
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="emailOrMobile" id="optionsRadios2" value="byemail" >
+                    Contact me by &mdash; email only
+                  </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="emailOrMobile" id="optionsRadios3" value="bymobile">
+                    Contact me by &mdash; mobile only
+                  </label>
+                </div>
+          </fieldset>    	
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" accept="image/*"  name="f1" class="form-control-file" onchange="loadFile(event)">
+            <img style="display:inline;" width="128" height="128" id="output" src="#" alt="your image b"/>
+            <input  type="file" accept="image/*" name="f2" class="form-control-file" onchange="loadFile2(event)">
+            <img style="display:inline;" width="128" height="128" id="output2" src="#" alt="your image b"/>
+            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              Check me out
+            </label>
+          </div>
+        </div> 
+    </div>
+  	<div class="row">
+  	    <div class="col-md-12 col-md-offset-1"> 
+  	     <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+  	    </div>
+  	</div>
+                </form>
+             </div>
+         </div>
+      </div>
+ </div>
+ 
+                 <div class="text-center">
+                    <a href="index.html" class="btn btn-default btn-sm" id="back-btn">
+                        <i class="fa fa-arrow-left"></i> Back to dashboard </a>
+                </div>
+
+ </div>
+    </body>
+</html> 
