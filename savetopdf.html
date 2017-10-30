@@ -1,8 +1,7 @@
+<!DOCTYPE html>
 <html>
-    <head>
+<head>
         <title>Hello OOP</title>
-        
-        <link rel="shortcut icon" type="image/png" href="<?=  base_url('assets/images/posts/icon.jpg') ?>">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,51 +9,114 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
-        <!--<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>-->
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+        
+        <!--Add External Libraries - JQuery and jspdf 
+        check out url - https://scotch.io/@nagasaiaytha/generate-pdf-from-html-using-jquery-and-jspdf
+        -->
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         
+        <!--jsPDF-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
         
-      	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
-      	<script type="text/javascript" src="https://datatables.net/media/js/site.js?_=d78b222e2531b63c1f8683e47301add9"></script>
-      	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-      	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
-      	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-      	<script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.js"></script>
-      	<link href="//cdn.datatables.net/responsive/2.1.1/css/dataTables.responsive.css"/>
+        <!--DtataTables-->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" type="text/css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.js"></script>
+        <link href="//cdn.datatables.net/responsive/2.1.1/css/dataTables.responsive.css"/>
 
-      	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
-      	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+</head>
+    
+<body>
+  
+<header>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+</header>
+
+<div class="row">
+    <div class="container">
+        <div id="content">
+            <h3>Sample h3 tag</h3>
+            <p>Sample pararaph</p>
+            
+            <table>
+              <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+              </tr>
+              <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+              </tr>
+              <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+              </tr>
+              <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+              </tr>
+              <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+              </tr>
+              <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+              </tr>
+            </table>
         
-      <!-- Print script -->
-      <style type="text/css" media="print">
-        .dontprint
-        { display: none; }
-      </style>
-      <script language="javascript">
-        function printdiv(printpage)
-        {
-        var headstr = "<html><head><title></title></head><body>";
-        var footstr = "</body>";
-        var newstr = document.all.item(printpage).innerHTML;
-        var oldstr = document.body.innerHTML;
-        document.body.innerHTML = headstr+newstr+footstr;
-        window.print();
-        document.body.innerHTML = oldstr;
-        return false;
- 
-        }
-      </script>
-      
-      <br>
+        </div>
+        <br><br>
+        <div id="editor"></div>
+        <button class="btn btn-default" id="cmd">Generate PDF</button> &nbsp; &nbsp;
+        <input name="b_print" type="button" class="btn btn-default"   onClick="printdiv('div_print');" value=" print ">
+                
+    </div>
+</div>
+
 <div class="container">
-<div class="main">
-<div class="row content">
-<input name="b_print" type="button" class="btn btn-default"   onClick="printdiv('div_print');" value=" طباعة ">
-	
+  <br><br><br><hr>
+  <h3>DataTables Table</h3>
 <div id="div_print"><br>
     <table id="example" class="display" cellspacing="0" width="100%" dir="rtl">
         <thead>
@@ -537,11 +599,47 @@
         </tbody>
 </div>
 </div>
-</div>
-</div>
+
+<script language="javascript">
+    
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {   
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+
+// This code is collected but useful, click below to jsfiddle link.
 
 
-<script type="text/javascript" class="init">
+</script>
+<script language="javascript">
+  // Print code
+        function printdiv(printpage)
+        {
+        var headstr = "<html><head><title></title></head><body>";
+        var footstr = "</body>";
+        var newstr = document.all.item(printpage).innerHTML;
+        var oldstr = document.body.innerHTML;
+        document.body.innerHTML = headstr+newstr+footstr;
+        window.print();
+        document.body.innerHTML = oldstr;
+        return false;
+ 
+        }
+        
+</script>
+<script language="javascript">
+  
+// DataTables Codes
 $(document).ready(function() {
     $('#example').DataTable( {
         "order": [[ 4, "desc" ]],
@@ -567,10 +665,38 @@ $(document).ready(function() {
     } );
 } );
 </script>
+
 <style type="text/css">
-    th, td { text-align: center; }
+    h3
+    {
+      border:1px solid black;
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    
+    .dontprint { 
+      display: none; 
+    }
+
 </style>
 
 
+
 </body>
+
+
 </html>
